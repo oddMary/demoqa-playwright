@@ -79,11 +79,11 @@ export class PracticeFormPage extends BasePage {
   }
 
   private get selectStateComboBox(): ComboBox {
-    return new ComboBox(this.page.locator('#state').getByRole('combobox'));
+    return new ComboBox(this.page.locator('#state'));
   }
 
   private get selectCityComboBox(): ComboBox {
-    return new ComboBox(this.page.locator('#city').getByRole('combobox'));
+    return new ComboBox(this.page.locator('#city'));
   }
 
   private get submitFormButton(): Button {
@@ -172,14 +172,12 @@ export class PracticeFormPage extends BasePage {
   }
 
   async selectState(state: string): Promise<PracticeFormPage> {
-    await this.selectStateComboBox.click();
-    await this.page.getByText(state, { exact: true }).click();
+    await this.selectStateComboBox.selectFromCombobox(state);
     return this;
   }
 
   async selectCity(city: string): Promise<PracticeFormPage> {
-    await this.selectCityComboBox.click();
-    await this.page.getByText(city, { exact: true }).click();
+    await this.selectCityComboBox.selectFromCombobox(city);
     return this;
   }
 

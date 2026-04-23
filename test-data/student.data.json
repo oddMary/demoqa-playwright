@@ -1,0 +1,54 @@
+{
+  "mandatoryData": [
+    { "label": "Student Name", "value": "John Doe" },
+    { "label": "Gender", "value": "Male" },
+    { "label": "Mobile", "value": "1234567890" }
+  ],
+  "mandatoryDataWithSubjects": [
+    { "label": "Student Name", "value": "John Doe" },
+    { "label": "Gender", "value": "Male" },
+    { "label": "Mobile", "value": "1234567890" },
+    { "label": "Subjects", "value": "Maths, Physics" }
+  ],
+  "mandatoryDataWithHobbies": [
+    { "label": "Student Name", "value": "John Doe" },
+    { "label": "Gender", "value": "Female" },
+    { "label": "Mobile", "value": "1234567890" },
+    { "label": "Hobbies", "value": "Reading, Music" }
+  ],
+  "mandatoryDataWithPicture": [
+    { "label": "Student Name", "value": "John Doe" },
+    { "label": "Gender", "value": "Other" },
+    { "label": "Mobile", "value": "1234567890" },
+    { "label": "Picture", "value": "photo.png" }
+  ],
+  "mandatoryDataWithAddress": [
+    { "label": "Student Name", "value": "John Doe" },
+    { "label": "Gender", "value": "Other" },
+    { "label": "Mobile", "value": "1234567890" },
+    { "label": "Address", "value": "221B Baker Street, London" }
+  ],
+  "mandatoryDataWithState": [
+    { "label": "Student Name", "value": "John Doe" },
+    { "label": "Gender", "value": "Female" },
+    { "label": "Mobile", "value": "1234567890" },
+    { "label": "State and City", "value": "" }
+  ],
+  "mandatoryDataWithStateAndCity": [
+    { "label": "Student Name", "value": "John Doe" },
+    { "label": "Gender", "value": "Male" },
+    { "label": "Mobile", "value": "1234567890" },
+    { "label": "State and City", "value": "Rajasthan Jaiselmer" }
+  ],
+  "allValidData": [
+    { "label": "Student Name", "value": "John Doe" },
+    { "label": "Student Email", "value": "john.doe@example.com" },
+    { "label": "Gender", "value": "Male" },
+    { "label": "Mobile", "value": "9876543210" },
+    { "label": "Date of Birth", "value": "14 April,1995" },
+    { "label": "Subjects", "value": "Maths, Computer Science" },
+    { "label": "Hobbies", "value": "Sports, Reading" },
+    { "label": "Picture", "value": "photo.png" },
+    { "label": "State and City", "value": "NCR Noida" }
+  ]
+}

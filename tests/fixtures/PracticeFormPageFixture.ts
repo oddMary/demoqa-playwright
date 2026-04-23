@@ -1,6 +1,7 @@
 import { test as base } from '@playwright/test';
 import { ResultModalAssertions } from '../../src/assertions/ResultModalAssertions';
 import { PracticeFormPageService } from '../../src/services/PracticeFormPageService';
+import { ResultModal } from '../../src/pages/ResultModal';
 
 type PracticeFormPageFixture = {
   practiceFormService: PracticeFormPageService;
@@ -15,7 +16,7 @@ export const test = base.extend<PracticeFormPageFixture>({
   },
 
   resultModalAssertions: async ({ page }, use) => {
-    await use(new ResultModalAssertions());
+    await use(new ResultModalAssertions(new ResultModal(page)));
   },
 });
 
