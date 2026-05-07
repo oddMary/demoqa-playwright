@@ -196,106 +196,106 @@ test.describe('Positive test scenarios', () => {
 //     });
 //   }
 
-  // test('TC-N-03 Empty Last Name', async ({ page }) => {
-  //   const form = new PracticeFormPage(page);
-  //   await form.open();
-  //   await form.setFirstName('John');
-  //   await form.selectGender('Male');
-  //   await form.setMobile('1234567890');
-  //   await form.submit();
-  //   await expect(page.locator('.modal-content')).not.toBeVisible();
-  // });
+//   // test('TC-N-03 Empty Last Name', async ({ page }) => {
+//   //   const form = new PracticeFormPage(page);
+//   //   await form.open();
+//   //   await form.setFirstName('John');
+//   //   await form.selectGender('Male');
+//   //   await form.setMobile('1234567890');
+//   //   await form.submit();
+//   //   await expect(page.locator('.modal-content')).not.toBeVisible();
+//   // });
 
-  // test('TC-N-04 Gender not selected', async ({ page }) => {
-  //   const form = new PracticeFormPage(page);
-  //   await form.open();
-  //   await form.setFirstName('John');
-  //   await form.setLastName('Doe');
-  //   await form.setMobile('1234567890');
-  //   await form.submit();
-  //   await expect(page.locator('.modal-content')).not.toBeVisible();
-  // });
+//   // test('TC-N-04 Gender not selected', async ({ page }) => {
+//   //   const form = new PracticeFormPage(page);
+//   //   await form.open();
+//   //   await form.setFirstName('John');
+//   //   await form.setLastName('Doe');
+//   //   await form.setMobile('1234567890');
+//   //   await form.submit();
+//   //   await expect(page.locator('.modal-content')).not.toBeVisible();
+//   // });
 
-  // test('TC-N-05 Mobile empty', async ({ page }) => {
-  //   const form = new PracticeFormPage(page);
-  //   await form.open();
-  //   await form.setFirstName('John');
-  //   await form.setLastName('Doe');
-  //   await form.selectGender('Male');
-  //   await form.submit();
-  //   await expect(page.locator('.modal-content')).not.toBeVisible();
-  // });
+//   // test('TC-N-05 Mobile empty', async ({ page }) => {
+//   //   const form = new PracticeFormPage(page);
+//   //   await form.open();
+//   //   await form.setFirstName('John');
+//   //   await form.setLastName('Doe');
+//   //   await form.selectGender('Male');
+//   //   await form.submit();
+//   //   await expect(page.locator('.modal-content')).not.toBeVisible();
+//   // });
 
-  // test('TC-N-06 Mobile < 10 digits', async ({ page }) => {
-  //   const form = new PracticeFormPage(page);
-  //   await form.open();
-  //   await form.setFirstName('John');
-  //   await form.setLastName('Doe');
-  //   await form.selectGender('Male');
-  //   await form.setMobile('12345');
-  //   await form.submit();
-  //   await expect(page.locator('.modal-content')).not.toBeVisible();
-  // });
+//   // test('TC-N-06 Mobile < 10 digits', async ({ page }) => {
+//   //   const form = new PracticeFormPage(page);
+//   //   await form.open();
+//   //   await form.setFirstName('John');
+//   //   await form.setLastName('Doe');
+//   //   await form.selectGender('Male');
+//   //   await form.setMobile('12345');
+//   //   await form.submit();
+//   //   await expect(page.locator('.modal-content')).not.toBeVisible();
+//   // });
 
-  // test('TC-N-07 Mobile > 10 digits', async ({ page }) => {
-  //   const form = new PracticeFormPage(page);
-  //   await form.open();
-  //   await form.setFirstName('John');
-  //   await form.setLastName('Doe');
-  //   await form.selectGender('Male');
-  //   await form.setMobile('123456789012');
-  //   await form.submit();
-  //   await expect(page.locator('.modal-content')).not.toBeVisible();
-  // });
+//   // test('TC-N-07 Mobile > 10 digits', async ({ page }) => {
+//   //   const form = new PracticeFormPage(page);
+//   //   await form.open();
+//   //   await form.setFirstName('John');
+//   //   await form.setLastName('Doe');
+//   //   await form.selectGender('Male');
+//   //   await form.setMobile('123456789012');
+//   //   await form.submit();
+//   //   await expect(page.locator('.modal-content')).not.toBeVisible();
+//   // });
 
-  // test('TC-N-08 Mobile with letters', async ({ page }) => {
-  //   const form = new PracticeFormPage(page);
-  //   await form.open();
-  //   await form.setFirstName('John');
-  //   await form.setLastName('Doe');
-  //   await form.selectGender('Male');
-  //   await form.setMobile('29abc45678');
-  //   await form.submit();
-  //   await expect(page.locator('.modal-content')).not.toBeVisible();
-  // });
+//   // test('TC-N-08 Mobile with letters', async ({ page }) => {
+//   //   const form = new PracticeFormPage(page);
+//   //   await form.open();
+//   //   await form.setFirstName('John');
+//   //   await form.setLastName('Doe');
+//   //   await form.selectGender('Male');
+//   //   await form.setMobile('29abc45678');
+//   //   await form.submit();
+//   //   await expect(page.locator('.modal-content')).not.toBeVisible();
+//   // });
 
-  // test('TC-N-09 Invalid email', async ({ page }) => {
-  //   const form = new PracticeFormPage(page);
-  //   await form.open();
-  //   await form.setFirstName('John');
-  //   await form.setLastName('Doe');
-  //   await form.setEmail('test@');
-  //   await form.selectGender('Male');
-  //   await form.setMobile('1234567890');
-  //   await form.submit();
-  //   await expect(page.locator('.modal-content')).not.toBeVisible();
-  // });
+//   // test('TC-N-09 Invalid email', async ({ page }) => {
+//   //   const form = new PracticeFormPage(page);
+//   //   await form.open();
+//   //   await form.setFirstName('John');
+//   //   await form.setLastName('Doe');
+//   //   await form.setEmail('test@');
+//   //   await form.selectGender('Male');
+//   //   await form.setMobile('1234567890');
+//   //   await form.submit();
+//   //   await expect(page.locator('.modal-content')).not.toBeVisible();
+//   // });
 
-  // test('TC-N-10 Invalid file format', async ({ page }) => {
-  //   const form = new PracticeFormPage(page);
-  //   await form.open();
-  //   await form.setFirstName('John');
-  //   await form.setLastName('Doe');
-  //   await form.selectGender('Male');
-  //   await form.setMobile('1234567890');
-  //   await form.uploadPicture('resources/file.pdf');
-  //   await form.submit();
-  //   await expect(page.locator('.modal-content')).not.toBeVisible();
-  // });
+//   // test('TC-N-10 Invalid file format', async ({ page }) => {
+//   //   const form = new PracticeFormPage(page);
+//   //   await form.open();
+//   //   await form.setFirstName('John');
+//   //   await form.setLastName('Doe');
+//   //   await form.selectGender('Male');
+//   //   await form.setMobile('1234567890');
+//   //   await form.uploadPicture('resources/file.pdf');
+//   //   await form.submit();
+//   //   await expect(page.locator('.modal-content')).not.toBeVisible();
+//   // });
 
-  // test('TC-N-11 State or City not selected', async ({ paри
-  //   await form.submit();
-  //   await expect(page.locator('.modal-content')).not.toBeVisible();
-  // });
+//   // test('TC-N-11 State or City not selected', async ({ paри
+//   //   await form.submit();
+//   //   await expect(page.locator('.modal-content')).not.toBeVisible();
+//   // });
 
-  // test('TC-N-12 Special characters in name', async ({ page }) => {
-  //   const form = new PracticeFormPage(page);
-  //   await form.open();
-  //   await form.setFirstName('@@@###');
-  //   await form.setLastName('@@@###');
-  //   await form.selectGender('Male');
-  //   await form.setMobile('1234567890');
-  //   await form.submit();
-  //   await expect(page.locator('.modal-content')).not.toBeVisible();
-  // });
-});
+//   // test('TC-N-12 Special characters in name', async ({ page }) => {
+//   //   const form = new PracticeFormPage(page);
+//   //   await form.open();
+//   //   await form.setFirstName('@@@###');
+//   //   await form.setLastName('@@@###');
+//   //   await form.selectGender('Male');
+//   //   await form.setMobile('1234567890');
+//   //   await form.submit();
+//   //   await expect(page.locator('.modal-content')).not.toBeVisible();
+//   // });
+// });
