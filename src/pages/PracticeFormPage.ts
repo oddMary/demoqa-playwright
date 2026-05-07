@@ -6,7 +6,8 @@ import { RadioButton } from '../core/controls/RadioButton';
 import { Checkbox } from '../core/controls/Checkbox';
 import { FileUpload } from '../core/controls/FileUpload';
 import { Button } from '../core/controls/Button';
-import { ComboBox } from '../core/controls/Combobox';
+import { ComboBox } from '../core/controls/ComboBox';
+import { MissingRequiredFieldData } from '../core/interfaces/MissingRequiredFieldsData';
 
 export class PracticeFormPage extends BasePage {
   constructor(page: Page) {
@@ -184,4 +185,42 @@ export class PracticeFormPage extends BasePage {
   async submitStudentRegistrationForm(): Promise<void> {
     await this.submitFormButton.click();
   }
+
+  // async isRequiredFieldMarkedInvalid(
+  //   field: MissingRequiredFieldData['missingField'],
+  // ): Promise<boolean> {
+  //   switch (field) {
+  //     case 'firstName':
+  //       return this.isControlInvalid(this.firstNameInput);
+  //     case 'lastName':
+  //       return this.isControlInvalid(this.lastNameInput);
+  //     case 'mobileNumber':
+  //       return this.isControlInvalid(this.mobileNumberInput);
+  //     case 'gender':
+  //       return this.isControlInvalid(this.maleGenderRadioButton);
+  //     default: {
+  //       const exhaustive: never = field;
+  //       throw new Error(`Unknown missingField: ${exhaustive}`);
+  //     }
+  //   }
+  // }
+
+  // private async isControlInvalid(control: {
+  //   getAttribute(name: string): Promise<string | null>;
+  //   matchesSelector(selector: string): Promise<boolean>;
+  // }): Promise<boolean> {
+  //   const ariaInvalid = await control.getAttribute('aria-invalid');
+  //   if (ariaInvalid === 'true') return true;
+
+  //   const classAttr = await control.getAttribute('class');
+  //   if (classAttr && /(is-invalid|invalid|field-error|has-error)/i.test(classAttr)) return true;
+
+  //   // Fallback to native validity if the element supports it.
+  //   // This remains inside the Page Object, so tests don't touch Playwright `page` directly.
+  //   try {
+  //     return await control.matchesSelector(':invalid');
+  //   } catch {
+  //     return false;
+  //   }
+  // }
 }

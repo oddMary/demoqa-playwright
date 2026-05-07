@@ -2,6 +2,7 @@ import { Page } from '@playwright/test';
 import { PracticeFormData } from '../core/interfaces/PracticeFormData';
 import { ResultModal } from '../pages/ResultModal';
 import { PracticeFormPage } from '../pages/PracticeFormPage';
+import { Logger } from '../core/logger';
 
 export class PracticeFormPageService {
   page: Page;
@@ -13,10 +14,14 @@ export class PracticeFormPageService {
   }
 
   async init(): Promise<PracticeFormPage> {
+    Logger.step('Opening Practice Form page');
+
     return await this.practiceFormPage.goToPracticeFormPage();
   }
 
   async fillForm(data: PracticeFormData): Promise<void> {
+    Logger.step('Filling practice form');
+
     if (data.firstName) {
       await this.practiceFormPage.setFirstName(data.firstName);
     }
@@ -72,7 +77,14 @@ export class PracticeFormPageService {
 
   async fillAndSubmitForm(data: PracticeFormData): Promise<ResultModal> {
     await this.fillForm(data);
+
+    Logger.step('Submitting practice form');
     await this.practiceFormPage.submitStudentRegistrationForm();
+
     return new ResultModal(this.page);
+  }
+
+  getFormPage(): PracticeFormPage {
+    return this.practiceFormPage;
   }
 }

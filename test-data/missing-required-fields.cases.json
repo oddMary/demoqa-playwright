@@ -38,5 +38,40 @@
       "email": "john.doe@example.com"
     },
     "missingField": "mobileNumber"
+  },
+  {
+    "title": "invalid Mobile Number (< 10 digits)",
+    "formData": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "gender": "Male",
+      "email": "john.doe@example.com",
+      "mobileNumber": "12345"
+    },
+    "missingField": "mobileNumber"
+  },
+  {
+    "title": "invalid Mobile Number (> 10 digits)",
+    "formData": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "gender": "Male",
+      "email": "john.doe@example.com",
+      "mobileNumber": "123456789012"
+    },
+    "missingField": "mobileNumber",
+    "expectedBehavior": "accept_with_mobile_normalization",
+    "expectedMobileNumberInResult": "1234567890"
+  },
+  {
+    "title": "invalid Mobile Number (contains letters)",
+    "formData": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "gender": "Male",
+      "email": "john.doe@example.com",
+      "mobileNumber": "29abc45678"
+    },
+    "missingField": "mobileNumber"
   }
 ]
